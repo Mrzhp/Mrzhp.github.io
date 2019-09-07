@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>小小菜鸟文章 | 小小菜鸟 1.0</title>
+  <title>leetcode-String-5. 最长回文子串 | 小小菜鸟 1.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="菜鸟起航，欢迎关注作者博客[1]: https://Mrzhp.github.io/">
+  <meta name="description" content="给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小小菜鸟文章">
-<meta property="og:url" content="http://yoursite.com/2019/09/04/崔斯特测试文章/index.html">
+<meta property="og:title" content="leetcode-String-5. 最长回文子串">
+<meta property="og:url" content="http://yoursite.com/2019/09/07/leetcode-String-5.最长回文子串（1）/index.html">
 <meta property="og:site_name" content="小小菜鸟 1.0">
-<meta property="og:description" content="菜鸟起航，欢迎关注作者博客[1]: https://Mrzhp.github.io/">
+<meta property="og:description" content="给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T03:38:00.757Z">
+<meta property="og:image" content="https://img-blog.csdn.net/20140901133948015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDM5NzM2OQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="https://img-blog.csdn.net/20140901134800948?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDM5NzM2OQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2019-09-07T14:36:58.330Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小小菜鸟文章">
-<meta name="twitter:description" content="菜鸟起航，欢迎关注作者博客[1]: https://Mrzhp.github.io/">
+<meta name="twitter:title" content="leetcode-String-5. 最长回文子串">
+<meta name="twitter:description" content="给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20140901133948015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDM5NzM2OQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternative" href="/atom.xml" title="小小菜鸟 1.0" type="application/atom+xml">
   
@@ -144,27 +148,47 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-崔斯特测试文章" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-leetcode-String-5.最长回文子串（1）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      小小菜鸟文章
+      leetcode-String-5. 最长回文子串
     </h1>
   
 
         
-        <a href="/2019/09/04/崔斯特测试文章/" class="archive-article-date">
-  	<time datetime="2019-09-04T05:03:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+        <a href="/2019/09/07/leetcode-String-5.最长回文子串（1）/" class="archive-article-date">
+  	<time datetime="2019-09-07T03:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>菜鸟起航，欢迎关注作者博客[1]: <a href="https://Mrzhp.github.io/" target="_blank" rel="noopener">https://Mrzhp.github.io/</a></p>
+        <p>给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。</p>
+<a id="more"></a>
+<p>示例 1：</p>
+<p>输入: “babad”<br>输出: “bab”<br>注意: “aba” 也是一个有效答案。<br>示例 2：</p>
+<p>输入: “cbbd”<br>输出: “bb”</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/longest-palindromic-substring" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-palindromic-substring</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>#翻转字符串，寻找最长公共子串</p>
+<p>###寻找最长公共子串<br>例如：str1=acbcbcef，str2=abcbced,则str1，str2的最长公共子串为bcbce。</p>
+<p>#####解法一：翻转字符串，求最长公共子串<br><img src="https://img-blog.csdn.net/20140901133948015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDM5NzM2OQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="50%"><br><img src="https://img-blog.csdn.net/20140901134800948?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDM5NzM2OQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="50%"><br>转自<a href="https://blog.csdn.net/u010397369/article/details/38979077" target="_blank" rel="noopener">https://blog.csdn.net/u010397369/article/details/38979077</a><br>1、申请一个二维数组，将两个字符串组成二维矩阵。<br>2、比较对应字符位置是否相等，相等则置为1，否则为0。<br>3、对角线为1的最长对角线就是最长公共子串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 获取两个字符串最长公共子串长度</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> str	第一个字符串</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> str2	第二个字符串</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span>	如果存在则返回最长公共子串长度，否则返回0</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getLCSLength2</span><span class="params">(String str, String str2)</span></span>&#123;</span><br><span class="line">		<span class="keyword">char</span>[] ary = str.toCharArray();</span><br><span class="line">		<span class="keyword">char</span>[] ary2 = str2.toCharArray();</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span>[][] temp = <span class="keyword">new</span> <span class="keyword">int</span>[ary.length][ary2.length];	<span class="comment">//声明一个二维数组，存储最长公共子串长度</span></span><br><span class="line">		<span class="keyword">int</span> length = <span class="number">0</span>;	<span class="comment">//最长公共子串长度</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ary2.length; i++)&#123;	<span class="comment">//初始化二维矩阵中的第一行</span></span><br><span class="line">			temp[<span class="number">0</span>][i] = (ary[<span class="number">0</span>] == ary2[i]) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; ary.length; j++)&#123;	<span class="comment">//初始化二维矩阵中的第一列</span></span><br><span class="line">			temp[j][<span class="number">0</span>] = (ary2[<span class="number">0</span>] == ary[j]) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; ary.length; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; ary2.length; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(ary[i] == ary2[j])&#123;</span><br><span class="line">					temp[i][j] = temp[i-<span class="number">1</span>][j-<span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">					</span><br><span class="line">					<span class="keyword">if</span>(temp[i][j] &gt; length)&#123;	<span class="comment">//当前元素值大于最大公共子串长度</span></span><br><span class="line">						length = temp[i][j];</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					temp[i][j] = <span class="number">0</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> length;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">————————————————</span><br><span class="line">原文链接：https:<span class="comment">//blog.csdn.net/u010397369/article/details/38979077</span></span><br></pre></td></tr></table></figure>
+
+<p>本题求解：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span></span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(s.equals(<span class="string">""</span>))&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">int</span> maxLen = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">int</span> end = <span class="number">0</span>;</span><br><span class="line">      String reverse = <span class="keyword">new</span> StringBuffer(s).reverse().toString();</span><br><span class="line">     <span class="keyword">int</span> len = s.length();</span><br><span class="line">     <span class="keyword">int</span> [][]arr = <span class="keyword">new</span> <span class="keyword">int</span>[len][len];</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;len;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i)==reverse.charAt(j))&#123;</span><br><span class="line">                <span class="keyword">if</span>(i==<span class="number">0</span>||j==<span class="number">0</span>)&#123;</span><br><span class="line">                arr[i][j] = <span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    arr[i][j]=arr[i-<span class="number">1</span>][j-<span class="number">1</span>]+<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(arr[i][j]&gt;maxLen)&#123;</span><br><span class="line">                maxLen = arr[i][j];</span><br><span class="line">                end = i;</span><br><span class="line">            &#125;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">      <span class="keyword">return</span> s.substring(end-maxLen+<span class="number">1</span>,end+<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行结果：解答错误<br>显示详情输入:”aacdefcaa”<br>输出<br>“aac”<br>预期结果<br>“aa”</p>
+<p>#####由于求出公共子串反转后为aacfedcaa,最长前缀为aac,但可以看出这并不是最长回文子串。<br>明天再说。</p>
+<p>#暴力法</p>
+<p>#####1、找出所有的子串</p>
+<p>#####2、查看子串是否为回文，如果是则与记录的最长回文字符串做比较，每次比较记录最长回文。<br>时间复杂度O(n^3),结果超时。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isHuiWen</span><span class="params">(String s)</span></span>&#123;<span class="comment">//判断一个字符串是否为回文</span></span><br><span class="line">        <span class="keyword">int</span> len = s.length();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len/<span class="number">2</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i)!=s.charAt(len-i-<span class="number">1</span>))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = s.length();</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        String substr = <span class="string">""</span>;</span><br><span class="line">        String maxString = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=len;j++)&#123;<span class="comment">//找出所有子串</span></span><br><span class="line">                substr = s.substring(i,j);</span><br><span class="line">                <span class="keyword">if</span>(isHuiWen(substr)&amp;&amp;substr.length()&gt;max)&#123;</span><br><span class="line">                    maxString = substr;</span><br><span class="line">                    max = substr.length();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxString;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -199,6 +223,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,7 +284,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/04/崔斯特测试文章/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/07/leetcode-String-5.最长回文子串（1）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -263,15 +298,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/07/leetcode-String-5.最长回文子串（1）/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/09/07/leetcode-String-20. 有效的括号/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          leetcode-String-5. 最长回文子串
+          leetcode-String-20. 有效的括号
         
       </div>
     </a>
   
+  
+    <a href="/2019/09/04/崔斯特测试文章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小小菜鸟文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
