@@ -145,6 +145,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-时间复杂度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/08/时间复杂度/">时间复杂度</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/08/时间复杂度/" class="archive-article-date">
+  	<time datetime="2019-09-08T15:03:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>坚持早起第7天打卡，坚持跑步第7天打卡 -v-</p>
+<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>忽略小项，忽略大项系数，常数操作（比大小，加减乘除运算）操作为O(1).</p>
+<p>对数器：绝对正确的方法（复杂度较大）<br>        一个随机数组发生器（堆，。。。）<br>        比较结果，相辅相成</p>
+<p>递归：通过将问题分解加以解决，每次执行进行压栈操作，栈中保存关于程序的所有细节（执行参数，执行位置。。），<br>当程序有返回值，通过取出栈数据恢复程序执行。<br>例子，递归寻找最大值。L…..R<br>Max(L,R) mid = (L+R)/2 Max(L,mid)和max(mid+1,R)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> []a,<span class="keyword">int</span> L,<span class="keyword">int</span> R)</span></span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(L == R)&#123;</span><br><span class="line">         <span class="keyword">return</span> a[L];</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">int</span> mid = (L + R)/<span class="number">2</span>;</span><br><span class="line">     <span class="keyword">int</span> tempL = find(a,L,mid);</span><br><span class="line">     <span class="keyword">int</span> tempR = find(a,mid+<span class="number">1</span>,R);</span><br><span class="line">     <span class="keyword">return</span> Math.max(tempR,tempL);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/08/时间复杂度/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-leetcode-String-28. 实现 strStr()" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -598,6 +681,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
             
             <div class="clearfix"></div>

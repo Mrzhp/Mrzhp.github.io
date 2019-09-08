@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 小小菜鸟 1.0</title>
+  <title>时间复杂度 | 小小菜鸟 1.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="java学习，记录菜鸡的每一天">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小小菜鸟 1.0">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="坚持早起第7天打卡，坚持跑步第7天打卡 -v- 时间复杂度忽略小项，忽略大项系数，常数操作（比大小，加减乘除运算）操作为O(1). 对数器：绝对正确的方法（复杂度较大）        一个随机数组发生器（堆，。。。）        比较结果，相辅相成 递归：通过将问题分解加以解决，每次执行进行压栈操作，栈中保存关于程序的所有细节（执行参数，执行位置。。），当程序有返回值，通过取出栈数据恢复程序执行">
+<meta name="keywords" content="算法,生活">
+<meta property="og:type" content="article">
+<meta property="og:title" content="时间复杂度">
+<meta property="og:url" content="http://yoursite.com/2019/09/08/时间复杂度/index.html">
 <meta property="og:site_name" content="小小菜鸟 1.0">
-<meta property="og:description" content="java学习，记录菜鸡的每一天">
+<meta property="og:description" content="坚持早起第7天打卡，坚持跑步第7天打卡 -v- 时间复杂度忽略小项，忽略大项系数，常数操作（比大小，加减乘除运算）操作为O(1). 对数器：绝对正确的方法（复杂度较大）        一个随机数组发生器（堆，。。。）        比较结果，相辅相成 递归：通过将问题分解加以解决，每次执行进行压栈操作，栈中保存关于程序的所有细节（执行参数，执行位置。。），当程序有返回值，通过取出栈数据恢复程序执行">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-08T15:42:44.077Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小小菜鸟 1.0">
-<meta name="twitter:description" content="java学习，记录菜鸡的每一天">
+<meta name="twitter:title" content="时间复杂度">
+<meta name="twitter:description" content="坚持早起第7天打卡，坚持跑步第7天打卡 -v- 时间复杂度忽略小项，忽略大项系数，常数操作（比大小，加减乘除运算）操作为O(1). 对数器：绝对正确的方法（复杂度较大）        一个随机数组发生器（堆，。。。）        比较结果，相辅相成 递归：通过将问题分解加以解决，每次执行进行压栈操作，栈中保存关于程序的所有细节（执行参数，执行位置。。），当程序有返回值，通过取出栈数据恢复程序执行">
   
     <link rel="alternative" href="/atom.xml" title="小小菜鸟 1.0" type="application/atom+xml">
   
@@ -143,36 +145,66 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-时间复杂度" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/08/时间复杂度/" class="archive-article-date">
-  	<time datetime="2019-09-08T15:03:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/08/时间复杂度/">时间复杂度</a>
+    <h1 class="article-title" itemprop="name">
+      时间复杂度
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/09/08/时间复杂度/" class="archive-article-date">
+  	<time datetime="2019-09-08T15:03:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>坚持早起第7天打卡，坚持跑步第7天打卡 -v-</p>
+<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>忽略小项，忽略大项系数，常数操作（比大小，加减乘除运算）操作为O(1).</p>
+<p>对数器：绝对正确的方法（复杂度较大）<br>        一个随机数组发生器（堆，。。。）<br>        比较结果，相辅相成</p>
+<p>递归：通过将问题分解加以解决，每次执行进行压栈操作，栈中保存关于程序的所有细节（执行参数，执行位置。。），<br>当程序有返回值，通过取出栈数据恢复程序执行。<br>例子，递归寻找最大值。L…..R<br>Max(L,R) mid = (L+R)/2 Max(L,mid)和max(mid+1,R)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> []a,<span class="keyword">int</span> L,<span class="keyword">int</span> R)</span></span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(L == R)&#123;</span><br><span class="line">         <span class="keyword">return</span> a[L];</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">int</span> mid = (L + R)/<span class="number">2</span>;</span><br><span class="line">     <span class="keyword">int</span> tempL = find(a,L,mid);</span><br><span class="line">     <span class="keyword">int</span> tempR = find(a,mid+<span class="number">1</span>,R);</span><br><span class="line">     <span class="keyword">return</span> Math.max(tempR,tempL);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>-v-<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.JPG">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -188,198 +220,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/08/时间复杂度/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/08/leetcode-String-28. 实现 strStr()/" class="archive-article-date">
-  	<time datetime="2019-09-08T14:27:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/08/leetcode-String-28. 实现 strStr()/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">leetcode-String-28. 实现 strStr()</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/08/leetcode-String-28. 实现 strStr()/">leetcode-String-28. 实现 strStr()</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/07/leetcode-String-20. 有效的括号/" class="archive-article-date">
-  	<time datetime="2019-09-07T03:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/07/leetcode-String-20. 有效的括号/">leetcode-String-20. 有效的括号</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/07/leetcode-String-3. 无重复字符的最长子串/" class="archive-article-date">
-  	<time datetime="2019-09-07T03:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/07/leetcode-String-3. 无重复字符的最长子串/">leetcode-String-3. 无重复字符的最长子串</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/07/leetcode-String-5.最长回文子串（1）/" class="archive-article-date">
-  	<time datetime="2019-09-07T03:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/07/leetcode-String-5.最长回文子串（1）/">leetcode-String-5. 最长回文子串</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/04/崔斯特测试文章/" class="archive-article-date">
-  	<time datetime="2019-09-04T05:03:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/04/崔斯特测试文章/">小小菜鸟文章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -402,8 +342,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
