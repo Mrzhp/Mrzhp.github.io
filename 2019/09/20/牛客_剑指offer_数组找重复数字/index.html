@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>小小菜鸟文章 | 小小菜鸟 1.0</title>
+  <title>数组中重复的数字 | 小小菜鸟 1.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="菜鸟起航，欢迎关注作者博客[1]: https://Mrzhp.github.io/">
+  <meta name="description" content="题目：数组中重复的数字">
+<meta name="keywords" content="牛客网 剑指offer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小小菜鸟文章">
-<meta property="og:url" content="http://yoursite.com/2019/09/04/崔斯特测试文章/index.html">
+<meta property="og:title" content="数组中重复的数字">
+<meta property="og:url" content="http://yoursite.com/2019/09/20/牛客_剑指offer_数组找重复数字/index.html">
 <meta property="og:site_name" content="小小菜鸟 1.0">
-<meta property="og:description" content="菜鸟起航，欢迎关注作者博客[1]: https://Mrzhp.github.io/">
+<meta property="og:description" content="题目：数组中重复的数字">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T03:38:00.757Z">
+<meta property="og:updated_time" content="2019-09-20T15:29:42.585Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小小菜鸟文章">
-<meta name="twitter:description" content="菜鸟起航，欢迎关注作者博客[1]: https://Mrzhp.github.io/">
+<meta name="twitter:title" content="数组中重复的数字">
+<meta name="twitter:description" content="题目：数组中重复的数字">
   
     <link rel="alternative" href="/atom.xml" title="小小菜鸟 1.0" type="application/atom+xml">
   
@@ -144,28 +145,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-崔斯特测试文章" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-牛客_剑指offer_数组找重复数字" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      小小菜鸟文章
+      数组中重复的数字
     </h1>
   
 
         
-        <a href="/2019/09/04/崔斯特测试文章/" class="archive-article-date">
-  	<time datetime="2019-09-04T05:03:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+        <a href="/2019/09/20/牛客_剑指offer_数组找重复数字/" class="archive-article-date">
+  	<time datetime="2019-09-20T15:18:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>菜鸟起航，欢迎关注作者博客[1]: <a href="https://Mrzhp.github.io/" target="_blank" rel="noopener">https://Mrzhp.github.io/</a></p>
+        <p>题目：数组中重复的数字</p>
+<a id="more"></a>
 
+<p>在一个长度为n的数组里的所有数字都在0到n-1的范围内。<br>数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。<br>例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是第一个重复的数字2。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Parameters:</span></span><br><span class="line">    <span class="comment">//    numbers:     an array of integers</span></span><br><span class="line">    <span class="comment">//    length:      the length of array numbers</span></span><br><span class="line">    <span class="comment">//    duplication: (Output) the duplicated number in the array number,length of duplication array is 1,so using duplication[0] = ? in implementation;</span></span><br><span class="line">    <span class="comment">//                  Here duplication like pointor in C/C++, duplication[0] equal *duplication in C/C++</span></span><br><span class="line">    <span class="comment">//    这里要特别注意~返回任意重复的一个，赋值duplication[0]</span></span><br><span class="line">    <span class="comment">// Return value:       true if the input is valid, and there are some duplications in the array number</span></span><br><span class="line">    <span class="comment">//                     otherwise false</span></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = i;</span><br><span class="line">         i=j;</span><br><span class="line">         j=temp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> numbers[],<span class="keyword">int</span> length,<span class="keyword">int</span> [] duplication)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(length&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;length;i++)&#123;<span class="comment">//遍历数组，把对应位置放对应的数，并判断数与该位置数组中的数是否相等，相等则重复</span></span><br><span class="line">            <span class="keyword">while</span>(i!=numbers[i])&#123;<span class="comment">//i和i位置的数（题目数的范围）</span></span><br><span class="line">                <span class="keyword">if</span>(numbers[i]==numbers[numbers[i]])&#123;<span class="comment">//重复</span></span><br><span class="line">                    duplication[<span class="number">0</span>] = numbers[i];</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">                <span class="comment">//swap(numbers[i],numbers[numbers[i]]);//此处交换错误区</span></span><br><span class="line">                <span class="keyword">int</span> temp = numbers[i];</span><br><span class="line">                numbers[i] = numbers[numbers[i]];</span><br><span class="line">                numbers[temp] = temp;<span class="comment">//一定是原来的temp，不能写成numbers[numbers[i]]</span></span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -199,6 +203,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">牛客网 剑指offer</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,7 +264,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/04/崔斯特测试文章/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/20/牛客_剑指offer_数组找重复数字/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -263,15 +278,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/07/leetcode-String-5.最长回文子串（1）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          leetcode-String-5. 最长回文子串
-        
-      </div>
-    </a>
   
+    <a href="/2019/09/19/牛客_左神_快速排序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">快速排序</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
