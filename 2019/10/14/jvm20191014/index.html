@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>替换空格 | 小小菜鸟 1.0</title>
+  <title>“第二章&#34; | 小小菜鸟 1.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目：替换空格">
-<meta name="keywords" content="牛客网 剑指offer">
+  <meta name="description" content="Hotspot算法实现">
+<meta name="keywords" content="java虚拟机">
 <meta property="og:type" content="article">
-<meta property="og:title" content="替换空格">
-<meta property="og:url" content="http://yoursite.com/2019/09/22/牛客_剑指offer_替换空格/index.html">
+<meta property="og:title" content="“第二章&quot;">
+<meta property="og:url" content="http://yoursite.com/2019/10/14/jvm20191014/index.html">
 <meta property="og:site_name" content="小小菜鸟 1.0">
-<meta property="og:description" content="题目：替换空格">
+<meta property="og:description" content="Hotspot算法实现">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-22T15:10:08.975Z">
+<meta property="og:updated_time" content="2019-10-14T15:56:30.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="替换空格">
-<meta name="twitter:description" content="题目：替换空格">
+<meta name="twitter:title" content="“第二章&quot;">
+<meta name="twitter:description" content="Hotspot算法实现">
   
     <link rel="alternative" href="/atom.xml" title="小小菜鸟 1.0" type="application/atom+xml">
   
@@ -145,31 +145,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-牛客_剑指offer_替换空格" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-jvm20191014" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      替换空格
+      “第二章&#34;
     </h1>
   
 
         
-        <a href="/2019/09/22/牛客_剑指offer_替换空格/" class="archive-article-date">
-  	<time datetime="2019-09-22T15:01:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-22</time>
+        <a href="/2019/10/14/jvm20191014/" class="archive-article-date">
+  	<time datetime="2019-10-14T15:29:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>题目：替换空格</p>
+        <p>Hotspot算法实现</p>
 <a id="more"></a>
+<p>GC停顿：GC分析GCRoots过程中为了保证一致性，必须停顿所有java执行线程</p>
+<p>准确的GC：oopmap数据结构，在类加载完成时，把对象引用进行记录。编译也会记录下栈和寄存器哪些是引用</p>
+<p>安全点：（程序长时间执行）<br>问题：每条指令设置oopmap耗费大量额外空间。</p>
+<p>特定地方（安全点）停顿GC<br>终端方式：<br>1、抢先式中断<br>全部中断，没有在安全点的线程恢复执行到安全点<br>2、主动式中断<br>不对线程进行直接操作，设置标志，在安全点，线程轮询这个标志，发现标志为真就自己中断挂起。</p>
+<p>安全区域：（引用关系不会发生变化的区域）<br>问题（安全点无法解决线程处于sleep或者blocked状态，线程无法响应JVM中断请求）</p>
+<p>线程执行到safe region中首先标识自己进入safe region，当jvm gc时，直接GC，不用管标识自己为safe Region的线程。但是<br>线程离开时，必须完成根节点枚举过程，必须等待完成。</p>
+<p>垃圾收集器：<br>serial收集器：单线程，stop the world，垃圾收集是必须暂停所有线程。<br>优点：简单高效</p>
+<p>parnew收集器（CMS）<br>serial多线程版本<br>并行：多GC线程，用户线程停止等待<br>并发：用户线程和垃圾回收线程同时执行（并行或者交替进行）</p>
 
-<p>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*不用多余存储空间，直接将StringBuffer扩容成spacenum*2+oldlen长度（setLength方法实现扩容）</span></span><br><span class="line"><span class="comment">*从前向后替换空格需要更多的字符移动，所以选择从后向前移动</span></span><br><span class="line"><span class="comment">*str.setCharAt（），此方法可以改变指定位置的字符</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">replaceSpace</span><span class="params">(StringBuffer str)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> spacenum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++)&#123;<span class="comment">//字符中空格个数</span></span><br><span class="line">            <span class="keyword">if</span>(str.charAt(i)==<span class="string">' '</span>)&#123;</span><br><span class="line">                spacenum++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> oldlen = str.length();<span class="comment">//原字符串长度</span></span><br><span class="line">        <span class="keyword">int</span> indexold = oldlen - <span class="number">1</span>;<span class="comment">//指针首先指向原数组末尾</span></span><br><span class="line">        <span class="keyword">int</span> newlen = oldlen + spacenum*<span class="number">2</span>;<span class="comment">//现在字符串长度</span></span><br><span class="line">        <span class="keyword">int</span> indexnew = newlen - <span class="number">1</span>;<span class="comment">//新指针指向新数组末尾</span></span><br><span class="line">        str.setLength(newlen);<span class="comment">//字符扩容,此处可以不扩容，因为后边要进行CharAt操作</span></span><br><span class="line">        <span class="keyword">for</span>(;indexold&gt;=<span class="number">0</span>&amp;&amp;indexold&lt;indexnew;indexold--)&#123;<span class="comment">//旧指针向前移动，遇到空格就替换，否则字符赋值到新指针位置（字符后移）</span></span><br><span class="line">            <span class="keyword">if</span>(str.charAt(indexold)==<span class="string">' '</span>)&#123;</span><br><span class="line">                str.replace();</span><br><span class="line">                str.setCharAt(indexnew--,<span class="string">'2'</span>);</span><br><span class="line">                str.setCharAt(indexnew--,<span class="string">'%'</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                str.setCharAt(indexnew--,str.charAt(indexold));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> str.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -208,7 +214,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">牛客网 剑指offer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">java虚拟机</a>
         		</li>
       		
 		</ul>
@@ -264,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/22/牛客_剑指offer_替换空格/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/14/jvm20191014/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,18 +284,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/24/牛客_剑指offer_打印逆序链表/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          打印逆序链表
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/21/牛客_剑指offer_数组寻找数字/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">二维数组中的查找</div>
+    <a href="/2019/10/13/jvm20191013/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">“垃圾回收&#34;</div>
       <i class="icon-circle-right"></i>
     </a>
   
