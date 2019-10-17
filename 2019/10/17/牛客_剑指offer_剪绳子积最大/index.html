@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>“栈模拟队列&#34; | 小小菜鸟 1.0</title>
+  <title>“绳子截取积最大&#34; | 小小菜鸟 1.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目：栈模拟队列">
-<meta name="keywords" content="牛客网 剑指offer">
+  <meta name="description" content="题目：给你一根长度为n的绳子，请把绳子剪成m段（m、n都是整数，n&amp;gt;1并且m&amp;gt;1），">
+<meta name="keywords" content="牛客网 剑指offer 动态规划 贪心算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="“栈模拟队列&quot;">
-<meta property="og:url" content="http://yoursite.com/2019/10/11/牛客_剑指offer_栈模拟队列/index.html">
+<meta property="og:title" content="“绳子截取积最大&quot;">
+<meta property="og:url" content="http://yoursite.com/2019/10/17/牛客_剑指offer_剪绳子积最大/index.html">
 <meta property="og:site_name" content="小小菜鸟 1.0">
-<meta property="og:description" content="题目：栈模拟队列">
+<meta property="og:description" content="题目：给你一根长度为n的绳子，请把绳子剪成m段（m、n都是整数，n&amp;gt;1并且m&amp;gt;1），">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-11T15:10:24.390Z">
+<meta property="og:updated_time" content="2019-10-17T15:49:24.982Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="“栈模拟队列&quot;">
-<meta name="twitter:description" content="题目：栈模拟队列">
+<meta name="twitter:title" content="“绳子截取积最大&quot;">
+<meta name="twitter:description" content="题目：给你一根长度为n的绳子，请把绳子剪成m段（m、n都是整数，n&amp;gt;1并且m&amp;gt;1），">
   
     <link rel="alternative" href="/atom.xml" title="小小菜鸟 1.0" type="application/atom+xml">
   
@@ -145,30 +145,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-牛客_剑指offer_栈模拟队列" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-牛客_剑指offer_剪绳子积最大" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      “栈模拟队列&#34;
+      “绳子截取积最大&#34;
     </h1>
   
 
         
-        <a href="/2019/10/11/牛客_剑指offer_栈模拟队列/" class="archive-article-date">
-  	<time datetime="2019-10-11T15:10:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
+        <a href="/2019/10/17/牛客_剑指offer_剪绳子积最大/" class="archive-article-date">
+  	<time datetime="2019-10-17T15:22:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>题目：栈模拟队列</p>
+        <p>题目：给你一根长度为n的绳子，请把绳子剪成m段（m、n都是整数，n&gt;1并且m&gt;1），</p>
 <a id="more"></a>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    Stack&lt;Integer&gt; stack1 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    Stack&lt;Integer&gt; stack2 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">        stack1.push(node);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(stack2.empty()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!stack1.empty()) &#123;</span><br><span class="line">                stack2.push(stack1.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stack2.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>每段绳子的长度记为k[0],k[1],...,k[m]。请问k[0]xk[1]x...xk[m]可能的最大乘积是多少？
+例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 剪绳子</span></span><br><span class="line"><span class="comment"> * author：张鹏</span></span><br><span class="line"><span class="comment"> * time: 2019/10/17 14:49:00</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">cutRope</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 题目：给你一根长度为n的绳子，请把绳子剪成m段（m、n都是整数，n&gt;1并且m&gt;1），</span></span><br><span class="line"><span class="comment">     * 每段绳子的长度记为k[0],k[1],...,k[m]。请问k[0]xk[1]x...xk[m]可能的最大乘积是多少？</span></span><br><span class="line"><span class="comment">     * 例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。</span></span><br><span class="line"><span class="comment">     * 动态规划</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> target</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回成绩最大的数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">cutRopdp</span><span class="params">(<span class="keyword">int</span> target)</span></span>&#123;</span><br><span class="line">         <span class="keyword">if</span>(target &lt; <span class="number">2</span>)&#123;</span><br><span class="line">             <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">if</span>(target ==<span class="number">2</span>)&#123;</span><br><span class="line">             <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">if</span>(target == <span class="number">3</span>)&#123;</span><br><span class="line">             <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">int</span>[] temp = <span class="keyword">new</span> <span class="keyword">int</span>[target+<span class="number">1</span>];</span><br><span class="line">         temp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">         temp[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">         temp[<span class="number">3</span>] = <span class="number">3</span>;</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">4</span>;i&lt;=target;i++)&#123;</span><br><span class="line">             <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">             <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=i/<span class="number">2</span>;j++)&#123;</span><br><span class="line">                 max = Math.max(max,temp[j]*temp[i-j]);</span><br><span class="line">             &#125;</span><br><span class="line">             temp[i] = max;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">return</span> temp[target];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 贪心算法，尽可能多剪掉长度为3的绳子,如果剩下绳子大于5，则剪掉3，如果为4，则剪成2*2</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> target</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">cutRope</span><span class="params">(<span class="keyword">int</span> target)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(target &lt; <span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(target ==<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(target == <span class="number">3</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">       <span class="keyword">int</span> threetimes = target/<span class="number">3</span>;</span><br><span class="line">        <span class="keyword">if</span>(target%<span class="number">3</span> == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)Math.pow(<span class="number">3</span>,threetimes-<span class="number">1</span>)*<span class="number">4</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>)Math.pow(<span class="number">3</span>,threetimes)*(target%<span class="number">3</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -209,7 +209,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">牛客网 剑指offer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">牛客网 剑指offer 动态规划 贪心算法</a>
         		</li>
       		
 		</ul>
@@ -265,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/11/牛客_剑指offer_栈模拟队列/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/17/牛客_剑指offer_剪绳子积最大/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,17 +279,8 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/13/jvm20191013/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          “垃圾回收&#34;
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/11/jvm20191011/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/16/jvm20191016/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">“第二章&#34;</div>
       <i class="icon-circle-right"></i>
     </a>
