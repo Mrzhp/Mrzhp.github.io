@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>小小菜鸟文章 | 小小菜鸟 1.0</title>
+  <title>“pow&#34; | 小小菜鸟 1.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="菜鸟起航，欢迎关注作者博客[1]: https://Mrzhp.github.io/">
+  <meta name="description" content="题目：实现pow方法">
+<meta name="keywords" content="牛客网 剑指offer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小小菜鸟文章">
-<meta property="og:url" content="http://yoursite.com/2019/09/04/崔斯特测试文章/index.html">
+<meta property="og:title" content="“pow&quot;">
+<meta property="og:url" content="http://yoursite.com/2019/10/19/牛客_剑指offer_pow方法/index.html">
 <meta property="og:site_name" content="小小菜鸟 1.0">
-<meta property="og:description" content="菜鸟起航，欢迎关注作者博客[1]: https://Mrzhp.github.io/">
+<meta property="og:description" content="题目：实现pow方法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T03:38:00.757Z">
+<meta property="og:updated_time" content="2019-10-19T14:58:12.634Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小小菜鸟文章">
-<meta name="twitter:description" content="菜鸟起航，欢迎关注作者博客[1]: https://Mrzhp.github.io/">
+<meta name="twitter:title" content="“pow&quot;">
+<meta name="twitter:description" content="题目：实现pow方法">
   
     <link rel="alternative" href="/atom.xml" title="小小菜鸟 1.0" type="application/atom+xml">
   
@@ -144,27 +145,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-崔斯特测试文章" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-牛客_剑指offer_pow方法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      小小菜鸟文章
+      “pow&#34;
     </h1>
   
 
         
-        <a href="/2019/09/04/崔斯特测试文章/" class="archive-article-date">
-  	<time datetime="2019-09-04T05:03:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+        <a href="/2019/10/19/牛客_剑指offer_pow方法/" class="archive-article-date">
+  	<time datetime="2019-10-19T14:54:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>菜鸟起航，欢迎关注作者博客[1]: <a href="https://Mrzhp.github.io/" target="_blank" rel="noopener">https://Mrzhp.github.io/</a></p>
+        <p>题目：实现pow方法</p>
+<a id="more"></a>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Power</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;<span class="comment">//全局变量，可以最后获取值判断0是否有异常，也可以通过抛出异常进行解决</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">power</span><span class="params">(<span class="keyword">double</span> base,<span class="keyword">int</span> ex)</span></span>&#123;<span class="comment">//</span></span><br><span class="line">        <span class="keyword">if</span>(base==<span class="number">0</span>&amp;&amp;ex&lt;<span class="number">0</span>)&#123;</span><br><span class="line">            flag = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0.0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(ex &lt; <span class="number">0</span>)&#123;<span class="comment">//指数为负数，求倒数</span></span><br><span class="line">            flag = <span class="keyword">true</span>;</span><br><span class="line">            ex = -ex;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> result = powerunsignedex(base,ex);</span><br><span class="line">        <span class="keyword">if</span>(flag)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1.0</span>/result;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 方法一：直接算</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> base</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> ex</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">powerunsignedex</span><span class="params">(<span class="keyword">double</span> base,<span class="keyword">int</span> ex)</span></span>&#123;</span><br><span class="line">        <span class="keyword">double</span> result = <span class="number">1.0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=ex;i++)&#123;</span><br><span class="line">            result*=base;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 递归，平方加速</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> base</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> ex</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">powerunsignedexrecur</span><span class="params">(<span class="keyword">double</span> base,<span class="keyword">int</span> ex)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(ex == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(ex == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> base;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> result = powerunsignedexrecur(base,ex&gt;&gt;<span class="number">1</span>);<span class="comment">//右移一位</span></span><br><span class="line">        result *= result;</span><br><span class="line">        <span class="keyword">if</span>((ex &amp; <span class="number">0x1</span>)!=<span class="number">0</span>)&#123;</span><br><span class="line">            result*=base;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 非递归</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> base</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> ex</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">powerunsigned</span><span class="params">(<span class="keyword">double</span> base,<span class="keyword">int</span> ex)</span></span>&#123;</span><br><span class="line">        <span class="keyword">double</span> temp = <span class="number">1.0</span>;</span><br><span class="line">        <span class="keyword">double</span> result = base;</span><br><span class="line">        <span class="keyword">if</span>(ex == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(ex !=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>((ex&amp;<span class="number">1</span>)==<span class="number">1</span>)</span><br><span class="line">                temp*=result;</span><br><span class="line">            result *= result;</span><br><span class="line">            ex= ex&gt;&gt;<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -199,6 +204,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">牛客网 剑指offer</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/04/崔斯特测试文章/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/19/牛客_剑指offer_pow方法/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -263,15 +279,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/07/leetcode-String-5.最长回文子串（1）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          leetcode-String-5. 最长回文子串
-        
-      </div>
-    </a>
   
+    <a href="/2019/10/18/牛客_剑指offer_位运算/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">“一的个数&#34;</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
