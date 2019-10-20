@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>leetcode-String-20. 有效的括号 | 小小菜鸟 1.0</title>
+  <title>“打印从1到n位数最大值（1-99999&#34; | 小小菜鸟 1.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。">
-<meta name="keywords" content="leetcode">
+  <meta name="description" content="题目：打印从1到n位数最大值（1-99999…）">
+<meta name="keywords" content="牛客网 剑指offer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-String-20. 有效的括号">
-<meta property="og:url" content="http://yoursite.com/2019/09/07/leetcode-String-20. 有效的括号/index.html">
+<meta property="og:title" content="“打印从1到n位数最大值（1-99999&quot;">
+<meta property="og:url" content="http://yoursite.com/2019/10/20/牛客_剑指offer_打印1到n位数的最大值/index.html">
 <meta property="og:site_name" content="小小菜鸟 1.0">
-<meta property="og:description" content="给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。">
+<meta property="og:description" content="题目：打印从1到n位数最大值（1-99999…）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T14:16:15.527Z">
+<meta property="og:updated_time" content="2019-10-20T15:34:27.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-String-20. 有效的括号">
-<meta name="twitter:description" content="给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。">
+<meta name="twitter:title" content="“打印从1到n位数最大值（1-99999&quot;">
+<meta name="twitter:description" content="题目：打印从1到n位数最大值（1-99999…）">
   
     <link rel="alternative" href="/atom.xml" title="小小菜鸟 1.0" type="application/atom+xml">
   
@@ -145,40 +145,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-leetcode-String-20. 有效的括号" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-牛客_剑指offer_打印1到n位数的最大值" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      leetcode-String-20. 有效的括号
+      “打印从1到n位数最大值（1-99999&#34;
     </h1>
   
 
         
-        <a href="/2019/09/07/leetcode-String-20. 有效的括号/" class="archive-article-date">
-  	<time datetime="2019-09-07T03:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
+        <a href="/2019/10/20/牛客_剑指offer_打印1到n位数的最大值/" class="archive-article-date">
+  	<time datetime="2019-10-20T14:34:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。</p>
+        <p>题目：打印从1到n位数最大值（1-99999…）</p>
 <a id="more"></a>
-<p>有效字符串需满足：</p>
-<p>左括号必须用相同类型的右括号闭合。<br>左括号必须以正确的顺序闭合。<br>注意空字符串可被认为是有效字符串。</p>
-<p>示例 1:</p>
-<p>输入: “()”<br>输出: true<br>示例 2:</p>
-<p>输入: “()[]{}”<br>输出: true<br>示例 3:</p>
-<p>输入: “(]”<br>输出: false<br>示例 4:</p>
-<p>输入: “([)]”<br>输出: false<br>示例 5:</p>
-<p>输入: “{[]}”<br>输出: true</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/valid-parentheses" target="_blank" rel="noopener">https://leetcode-cn.com/problems/valid-parentheses</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<p>思路：递归思想，首先匹配最里边的括号。由于一开始无法得知内部结构，所以引入栈结构，每次与栈顶进行比较，如果匹配则移除栈顶元素。</p>
-<p>我的解答：执行结果：通过<br>显示详情<br>执行用时 :6 ms, 在所有 Java 提交中击败了68.55%的用户<br>内存消耗 :34.5 MB, 在所有 Java 提交中击败了83.67%的用户</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        Stack&lt;Character&gt; a = <span class="keyword">new</span> Stack&lt;Character&gt;();<span class="comment">//创建存储字符的栈</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;<span class="comment">//便利字符串</span></span><br><span class="line">            <span class="keyword">char</span> c = s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(a.empty())&#123;<span class="comment">//如果栈空，则直接插入元素</span></span><br><span class="line">                a.push(c);</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(isMatch(a.peek(),c))&#123;<span class="comment">//判断现在字符是否和栈顶元素是否匹配，匹配则去除栈顶元素，不匹配则压栈。</span></span><br><span class="line">                a.pop();</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                a.push(c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> a.empty();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isMatch</span><span class="params">(<span class="keyword">char</span> c1,<span class="keyword">char</span> c2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (c1==<span class="string">'('</span>&amp;&amp;c2==<span class="string">')'</span>)||(c1==<span class="string">'['</span>&amp;&amp;c2==<span class="string">']'</span>)||(c1==<span class="string">'&#123;'</span>&amp;&amp;c2==<span class="string">'&#125;'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//打印从1到n位数最大值（1-99999....）</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ToMaxOfDigits</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">toMaxOfDigits</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n&lt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">char</span>[] digits = <span class="keyword">new</span> <span class="keyword">char</span>[n];<span class="comment">//默认初始化时ASCII码的0</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; digits.length; ++i) &#123; <span class="comment">//放字符0进行初始化</span></span><br><span class="line">            digits[i] = <span class="string">'0'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!increment(digits))&#123;<span class="comment">//判断最高位是否需要进位而超过n</span></span><br><span class="line">            printNumber(digits);<span class="comment">//打印，注意字符数组中有很多没用的‘0’</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">increment</span><span class="params">(<span class="keyword">char</span>[] digits)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> isOverflow = <span class="keyword">false</span>;<span class="comment">//越界，打印完成标志</span></span><br><span class="line">        <span class="keyword">int</span> nTakeOver = <span class="number">0</span>;<span class="comment">//进位</span></span><br><span class="line">        <span class="keyword">int</span> nLength = digits.length -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = nLength;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">            <span class="keyword">int</span> nsum = digits[i] - <span class="string">'0'</span> + nTakeOver;<span class="comment">//转换成整型以便后边进行自加操作</span></span><br><span class="line">            <span class="keyword">if</span>(i == nLength)&#123;</span><br><span class="line">                nsum ++;<span class="comment">//如果是最后一个字符，进行自加操作</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nsum &gt;= <span class="number">10</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i == <span class="number">0</span>)&#123;<span class="comment">//进位</span></span><br><span class="line">                    isOverflow = <span class="keyword">true</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    nsum -= <span class="number">10</span>;</span><br><span class="line">                    nTakeOver = <span class="number">1</span>;</span><br><span class="line">                    digits[i] = (<span class="keyword">char</span>)(<span class="string">'0'</span>+nsum);<span class="comment">//还原成字符</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                digits[i] = (<span class="keyword">char</span>)(nsum + <span class="string">'0'</span>);</span><br><span class="line">                <span class="keyword">break</span>;<span class="comment">//一次返回</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> isOverflow;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printNumber</span><span class="params">(<span class="keyword">char</span>[] digit)</span></span>&#123;<span class="comment">//打印操作</span></span><br><span class="line">        <span class="keyword">boolean</span> isBeginning0 = <span class="keyword">true</span>;<span class="comment">//是否是打印开始</span></span><br><span class="line">        <span class="keyword">int</span> nLength = digit.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=nLength;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(isBeginning0&amp;&amp;(digit[i]!=<span class="string">'0'</span>))&#123;</span><br><span class="line">                isBeginning0 = <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!isBeginning0)&#123;</span><br><span class="line">                System.out.print(digit[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        toMaxOfDigits(<span class="number">2</span>);</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -219,7 +209,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">牛客网 剑指offer</a>
         		</li>
       		
 		</ul>
@@ -275,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/07/leetcode-String-20. 有效的括号/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/20/牛客_剑指offer_打印1到n位数的最大值/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -289,18 +279,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/08/leetcode-String-28. 实现 strStr()/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          leetcode-String-28. 实现 strStr()
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/07/leetcode-String-3. 无重复字符的最长子串/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">leetcode-String-3. 无重复字符的最长子串</div>
+    <a href="/2019/10/19/牛客_剑指offer_pow方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">“pow&#34;</div>
       <i class="icon-circle-right"></i>
     </a>
   
