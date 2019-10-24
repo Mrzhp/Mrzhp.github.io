@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>leetcode-String-28. 实现 strStr() | 小小菜鸟 1.0</title>
+  <title>“java反射机制&#34; | 小小菜鸟 1.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="实现 strStr() 函数。">
-<meta name="keywords" content="leetcode">
+  <meta name="description" content="java 反射机制">
+<meta name="keywords" content="java基础 反射">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-String-28. 实现 strStr()">
-<meta property="og:url" content="http://yoursite.com/2019/09/08/leetcode-String-28. 实现 strStr()/index.html">
+<meta property="og:title" content="“java反射机制&quot;">
+<meta property="og:url" content="http://yoursite.com/2019/10/24/java基础 - 反射/index.html">
 <meta property="og:site_name" content="小小菜鸟 1.0">
-<meta property="og:description" content="实现 strStr() 函数。">
+<meta property="og:description" content="java 反射机制">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-08T14:29:37.434Z">
+<meta property="og:updated_time" content="2019-10-24T15:16:05.826Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-String-28. 实现 strStr()">
-<meta name="twitter:description" content="实现 strStr() 函数。">
+<meta name="twitter:title" content="“java反射机制&quot;">
+<meta name="twitter:description" content="java 反射机制">
   
     <link rel="alternative" href="/atom.xml" title="小小菜鸟 1.0" type="application/atom+xml">
   
@@ -145,38 +145,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-leetcode-String-28. 实现 strStr()" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java基础 - 反射" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      leetcode-String-28. 实现 strStr()
+      “java反射机制&#34;
     </h1>
   
 
         
-        <a href="/2019/09/08/leetcode-String-28. 实现 strStr()/" class="archive-article-date">
-  	<time datetime="2019-09-08T14:27:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-08</time>
+        <a href="/2019/10/24/java基础 - 反射/" class="archive-article-date">
+  	<time datetime="2019-10-24T15:29:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>实现 strStr() 函数。</p>
+        <p>java 反射机制</p>
 <a id="more"></a>
-<p>给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。</p>
-<p>示例 1:</p>
-<p>输入: haystack = “hello”, needle = “ll”<br>输出: 2<br>示例 2:</p>
-<p>输入: haystack = “aaaaa”, needle = “bba”<br>输出: -1<br>说明:</p>
-<p>当 needle 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。</p>
-<p>对于本题而言，当 needle 是空字符串时我们应当返回 0 。这与C语言的 strstr() 以及 Java的 indexOf() 定义相符。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/implement-strstr" target="_blank" rel="noopener">https://leetcode-cn.com/problems/implement-strstr</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<p>#思路<br>判断needle是否是haystack的子串，找到它的位置。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">strStr</span><span class="params">(String haystack, String needle)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(needle.equals(<span class="string">""</span>))&#123;<span class="comment">//此处不能用==</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> haylen = haystack.length();</span><br><span class="line">        <span class="keyword">int</span> neelen = needle.length();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;haylen;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(haystack.charAt(i)==needle.charAt(<span class="number">0</span>))&#123;<span class="comment">//找到可能与字符串开始字符相等的开始点</span></span><br><span class="line">                <span class="keyword">if</span>(haylen-i&lt;neelen)&#123;</span><br><span class="line">                    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k=i+<span class="number">1</span>, j=<span class="number">1</span>;j&lt;neelen;j++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(haystack.charAt(k++)!=needle.charAt(j))&#123;</span><br><span class="line">                        flag = -<span class="number">1</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(flag == <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+<p>.class文件在编译时不可获取，在运行时打开和检查.class文件</p>
+<p>反射主要功能：<br>1、在运行时判断一个对象所属类型<br>2、在运行时构造任意一个类的对象<br>3、在运行时判断类具有的成员变量和方法<br>4、在运行时调用任一个对象的方法</p>
+<p>1、获取Class对象<br>（1）使用forName获取类对象<br>class.forName(JDBC.driver);//直接回引发类的初始化<br>（2）直接获取对对象class//不会引发初始化<br>Class<? extends Shape> shape = circle.class //此处使用泛型主要是为了在编译器做类型检查
+（3）调用对象的getClass()方法
+StringBuilder str = new StringBuilder("123")
+class<?> klass = str.getClass();</p>
+<p>2、判断是否为某个类的实例<br>public native boolean isInstance(Object object);</p>
+<p>3、创建实例<br>（1）使用newInstance()创建实例<br>Class<?> klass= String.class;
+Object o = klass.newInstance();
+（2）获取Constructor对象，指定构造器构造类（参数构造函数）,用newInstance去构造类
+Class<?> klass = String.class<br>Constructor constructor = klass.getConstructor(String.class);<br>Object o=constructor.newInstance(“2343”);</p>
+<p>4、获取方法<br>（1）getDeclaredMethods() 获取除了继承方法外的所有方法（包括private方法）<br>public Method[] getDeclaredMethods() throw SecurityException<br>（2）getMethods()所以公用方法，包括继承的公用方法<br>public Method[] getMethods() throw SecurityException<br>（3）getMethod(),返回特定的方法，第一个参数为方法名，后边是对应形餐的Class对象<br>public Method getMethod(String name,Class&lt;?&gt;…patameterTypes)</p>
+<p>例如class a{<br>    public int add(int b,int c){<br>    return a+b;<br>    }<br>}<br>class test{<br>    class&lt;?&gt; klass = a.class;<br>    Method method = klass.getMethod(klass,int.class,int.class);<br>}</p>
+<p>5、获取构造器信息<br>getConstructor()获取构造器，通过newInstance()创建对象实例</p>
+<p>6、获取成员变量信息<br>getFiled：访问公有成员变量<br>getDeclaredMethods:所有成员变量（除了父类）</p>
+<p>7、调用方法<br>invoke(Object obj,Object … args) throws IllegalAcessException,IllegalArgumentException,InvocationTargetException</p>
+<p>public class test1 {<br>    public static void main(String[] args) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {<br>        Class&lt;?&gt; klass = methodClass.class;<br>        //创建methodClass的实例<br>        Object obj = klass.newInstance();<br>        //获取methodClass类的add方法<br>        Method method = klass.getMethod(“add”,int.class,int.class);<br>        //调用method对应的方法 =&gt; add(1,4)<br>        Object result = method.invoke(obj,1,4);<br>        System.out.println(result);<br>    }<br>}<br>class methodClass {<br>    public final int fuck = 3;<br>    public int add(int a,int b) {<br>        return a+b;<br>    }<br>    public int sub(int a,int b) {<br>        return a+b;<br>    }<br>}</p>
+<p>8、利用反射创建数组<br>Class&lt;?&gt; cls = Class.forName(“java.lang.String”);<br>Object array = Array.newInstance(cls,25)//此处返回值是Object对象，而非数组<br>Array.set(array,0,”hello”)<br>Array.set(array,0,”world”)</p>
 
       
 
@@ -216,7 +227,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java基础 反射</a>
         		</li>
       		
 		</ul>
@@ -272,7 +283,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/08/leetcode-String-28. 实现 strStr()/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/24/java基础 - 反射/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,18 +297,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/08/时间复杂度/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          时间复杂度
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/07/leetcode-String-20. 有效的括号/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">leetcode-String-20. 有效的括号</div>
+    <a href="/2019/10/20/牛客_剑指offer_打印1到n位数的最大值/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">“打印从1到n位数最大值（1-99999&#34;</div>
       <i class="icon-circle-right"></i>
     </a>
   
